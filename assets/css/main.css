@@ -1,0 +1,67 @@
+/*
+    Global CSS rules
+*/
+
+:root {
+    --background-color: royalblue;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url(/assets/images/temp-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*
+    Background Map
+*/
+
+#world-map {
+    width: 100%;
+    height: 100vh;
+}
+
+/*
+    Left Sidebar
+*/
+
+.left-sidebar {
+    z-index: 9998;
+    background-color: white;
+    width: 25vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+/*
+    Loading Overlay
+*/
+
+.load-overlay {
+    position: absolute;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.load-overlay .spinner-grow {
+    height: 5rem;
+    width: 5rem;
+    transition: .01s transform;
+}
+
+.spinner-grow.full-grow {
+    position: absolute;
+    transform: scale(50);
+    animation: 1s linear 3 spinner-grow;
+}
