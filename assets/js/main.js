@@ -8,12 +8,34 @@ function hideLoader() {
     }, 2000);
 }
 
-function initMap() {
-    // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.036 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("world-map"), {
-    zoom: 4,
-    center: uluru,
-    });
-}
+var world_map = L.map('world-map', {
+    zoomSnap: 0.25,
+    zoomControl: false,
+    scrollWheelZoom: false,
+    maxBoundsViscosity: 0.50,
+    worldCopyJump: true
+}).setView([40, 0], 1.50);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox/light-v10',
+    maxZoom: 3,
+    minZoom: 1,
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'sk.eyJ1IjoibWlyb21hbmVzdGFyIiwiYSI6ImNrbDFzYTAwejEwbnUyd3VpaHV1eWZzZmoifQ.yKU91MtkBHK1Cd_TfGkr_Q',
+}).addTo(world_map);
+
+/* Add to tileLayer to remove duplicate map
+    noWrap: true,
+    bounds: [
+        [-90, -180],
+        [90, 180]
+    ]
+*/
+
+
+world_map.fitWorld().zoomIn();
+world_map.setMaxBounds(world_map.getBounds());
+
+$('.leaflet-control-attribution.leaflet-control').remove();
