@@ -22,7 +22,24 @@ html {
 }
 
 body {
+    width: 100%;
+    height: 100%;
+}
 
+.wrapper {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    grid-template-columns: 15%;
+    position: fixed;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    grid-column: 2/-1;
+    grid-row: 1/-1;
 }
 
 /*
@@ -31,7 +48,7 @@ body {
 
 #world-map {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 1;
 }
 
@@ -42,12 +59,12 @@ body {
 .left-sidebar {
     z-index: 5;
     background-color: white;
-    width: 20vh;
-    position: absolute;
     height: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
+    grid-column: 1/2;
+    grid-row: 1/-1;
 }
 
 .sidebar-logo {
@@ -110,13 +127,21 @@ body {
     font-size: 1rem;
 }
 
+.sidebar-facts h3 {
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 1;
+}
+
 .sidebar-facts p {
     color: var(--creamsicle);
+    margin: 0;
 }
 
 .facts-img {
-    width: 40%;
+    width: 25%;
     margin-bottom: 10px;
+    padding-right: .25px;
 }
 
 .sidebar-facts div {
@@ -126,18 +151,18 @@ body {
 
 .sidebar-facts div:after {
     content: '';
-    width: 50%;
+    width: 65%;
     height: 1px;
-    background: var(--dGrey);
+    background: var(--lGrey);
     position: absolute;
     bottom: 0;
-    left: 25%;
+    left: 17%;
 }
 
 .sidebar-comission {
     text-align: right;
-    padding: 1rem 1rem 0 1rem;
     color: var(--blue);
+    padding: 0 1rem;
 }
 
 .sidebar-comission p {
@@ -147,10 +172,58 @@ body {
     z-index: 2;
 }
 
+.sidebar-comission p:before {
+    content: "";
+    background: url(../images/logos/qm.png) no-repeat;
+    width: 30px;
+    height: 40px;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .sidebar-comission span {
     display: inline-block;
     font-size: .75rem;
     line-height: 1;
+}
+
+.sidebar-explore {
+    width: 100%;
+    border-top: 1px solid var(--lGrey);
+    padding: 1rem;
+}
+
+.sidebar-explore h2 {
+    text-transform: uppercase;
+    color: var(--dGrey);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.sidebar-explore a {
+    text-decoration: none;
+    text-align: right;
+    color: var(--dGrey);
+    background: rgb(240,240,240);
+    font-size: .65rem;
+    display: block;
+    width: 100%;
+    padding: .5rem 1.5rem .5rem 0;
+    position: relative;
+    margin-top: 5px;
+}
+
+.sidebar-explore a:after {
+    content: url(../images/logos/arrow.svg);
+    width: 8px;
+    height: 12px;
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .sidebar-interest {
