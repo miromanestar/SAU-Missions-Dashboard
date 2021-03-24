@@ -32,24 +32,66 @@
     </head>
 
     <body>
+        <div class="wrapper">
 
-        <!-- Loading Overlay -->
-        <div class="load-overlay justify-content-center align-items-center">
-            <div class="spinner-grow text-danger" role="status">
-                <span class="visually-hidden">Loading...</span>
+            <!-- Loading Overlay -->
+            <div class="load-overlay justify-content-center align-items-center" style="display: none;">
+                <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
             </div>
-        </div>
 
-        <!-- Left Sidebar -->
-        <div class="left-sidebar">
+            <!-- Left Sidebar -->
+            <aside class="left-sidebar">
+                <div class="sidebar-logo">
+                    <img class="logo" src="assets/images/logos/sau-logo.svg" alt="Southern Adventist University Logo" />
+                </div>
 
-        </div>
+                <div class="sidebar-title">
+                    <h1>STUDENT MISSIONS</h1>
+                    <div class="sidebar-tagline">
+                        DISCOVER YOUR PURPOSE
+                    </div>
+                </div>
 
-        <!-- Map Object -->
-        <div id="world-map" class="map">
+                <div class="sidebar-facts">
+                    <h2>Fast Facts</h2>
+                    <div id="facts-current">
+                        <img class="facts-img" src="assets/images/logos/serving-ic.svg" />
+                        <h3>121</h3>
+                        <p>Students Serving</p>
+                    </div>
+                    <div id="facts-countries">
+                        <img class="facts-img" src="assets/images/logos/countries-ic.svg" />
+                        <h3>26</h3>
+                        <p>Countries</p>
+                    </div>
+                </div>
 
-        </div>
+                <div class="sidebar-comission">
+                    <p>
+                        Go into all nations
+                        <br />
+                        <span class="comission-verse">
+                            - Matt 28:19
+                        </span>
+                    </p>
+                </div>
+
+                <div class="sidebar-interest">
+                    <h2>INTERESTED?</h2>
+                    <p>Tap to learn more</p>
+                    <a href="https://www.southern.edu/administration/student-missions/index.html">STUDENT MISSIONS</a>
+                </div>
+            </aside>
+
+            <!-- Map Object -->
+            <div id="world-map" class="map">
+
+            </div>
         
+        </div>
+
         <!-- Internal Scripts -->
         <script defer src="assets/js/jquery-3.5.1-min.js"></script>
         <script defer src="assets/js/popper-2.6.0.min.js"></script>

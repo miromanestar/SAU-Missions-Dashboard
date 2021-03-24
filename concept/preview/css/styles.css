@@ -1,0 +1,861 @@
+:root {
+--green: #14502C;
+--lime:#CED649;
+--orange:#CD5328;
+--creamsicle:#FF8849;
+--blue:#005293;
+--lBlue:#BBE7E6;
+--yellow:#FADA63;
+--lGrey: #BBBCBB;
+--dGrey:#5F6163;
+--white: #fff;
+--black: #000;
+}
+
+@font-face {
+    font-family: 'helveticaneue_condensedCnBd';
+    src: url('../fonts/helveticaneue-condensed_bold-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneue-condensed_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticaneue_condensedCnRg';
+    src: url('../fonts/helveticaneue-condensed-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneue-condensed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticaneue_thincondCnRgTh';
+    src: url('../fonts/helveticaneue-condensed_thin-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneue-condensed_thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica 35 Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Helvetica 35 Thin'), url('../fonts/HelveticaNeue-Thin.woff') format('woff');
+    }
+
+@font-face {
+        font-family: 'Helvetica Neue Medium';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Helvetica Neue Medium'), url('../fonts/HelveticaNeueMedium.woff') format('woff');
+        }
+
+@font-face {
+        font-family: 'Helvetica 65 Medium';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Helvetica 65 Medium'), url('../fonts/HelveticaNeue-Medium.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'helveticaneue_roman';
+            src: url('../fonts/HelveticaNeue-Roman.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+/*Global Styles */
+html {
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    width:100%;
+    height:100%;
+    font: normal 18px/1.2;
+    font-family:'helveticaneue_condensedCnRg', 'Helvetica Neue', sans-serif;
+}
+p {
+    font-family: 'helveticaneue_roman';
+}
+h1, h2, h3 {
+    color:var(--blue);
+    line-height:1.2;
+}
+.wrapper {
+    width:100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 8.333333333333333% 1fr;
+    position: fixed;
+
+}
+aside {
+    background: var(--white);
+    grid-column:1/2;
+    grid-row:1/-1;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    z-index: 5;
+}
+main {
+    position: relative;
+    z-index: 1;
+    grid-column:2/-1;
+    grid-row: 1/-1;
+}
+
+/*aside styles */
+.logoBox {
+    width:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    
+}
+img.logo  {
+    width: 100%;
+    display: block;
+    margin:auto;
+}
+
+.title {
+    position: relative;
+    width:115%;
+}
+.title h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'helveticaneue_condensedCnBd';
+    padding: .75rem 0;
+    font-size:120%;
+    margin:0;
+    background-color:var(--lime);
+    color:var(--blue);
+    position: absolute;
+    top:0;
+    left:0;
+    width:110%;
+}
+.title h1:after {
+    content:"";
+    position:absolute;
+    top:100%;
+    right:0;
+    width: 0;
+    height: 0;
+    border-top: 40px solid var(--green);
+    border-right: 75px solid transparent;
+    z-index:-1;
+    }
+
+p.tagline {
+    text-transform: uppercase;
+    width:100%;
+    background:var(--blue);
+    color:var(--white);
+    margin:0;
+    font-family: 'helveticaneue_thincondCnRgTh';
+    font-size:125%;
+    line-height: 1;
+    padding:4rem .5rem 1rem 1rem;
+}
+
+.facts {
+    text-align: center;
+    width:100%;
+    padding: 1rem 1rem 1rem;
+}
+
+.facts div {
+    position: relative;
+    padding:3.25rem 0 1rem;
+}
+
+.facts div:after {
+    content:'';
+    width:50%;
+    height:1px;
+    background: var(--dGrey);
+    position: absolute;
+    bottom:0;
+    left: 25%;
+}
+
+.facts-current {
+    background: url(../links/serving-ic.svg) no-repeat;
+    background-position: center 1.2rem;
+    background-size: 40%;
+}
+
+.facts-countries {
+    background: url(../links/countries-ic.svg) no-repeat;
+    background-position: center 1rem;
+    background-size: 30%;
+}
+
+.facts h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin:0;
+}
+
+
+.facts h3 {
+    color:var(--blue);
+    font-size: 3.5rem;
+    font-family: 'helveticaneue_thincondCnRgTh';
+    margin: 0;
+    line-height: 1;
+}
+
+.facts p {
+    margin:0;
+    color:var(--creamsicle);
+    font-family: 'helveticaneue_condensedCnBd';
+    font-size: .75rem;
+    line-height:1;
+}
+
+.commission {
+    width:100%;
+    text-align: right;
+    padding:1rem 1rem 0 1rem;
+    color:var(--blue);
+}
+
+.commission p {
+    font-family: 'Helvetica 35 Thin';
+    font-size: 1.5rem;
+    line-height: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.commission p:before {
+    content:"";
+    background: url(../links/qm.png) no-repeat;
+    width:30px;
+    height:40px;
+    background-size: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index:-1;
+}
+.commission span {
+    display: inline-block;
+    font-size: .75rem;
+    font-family: 'helveticaneue_condensedCnBd';
+    line-height:1;
+}
+
+.explore {
+    width:100%;
+    border-top:1px solid var(--dGrey);
+    margin-top:1rem;
+    padding:1rem;
+}
+
+.explore h2 {
+    text-transform: uppercase;
+    color:var(--dGrey);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.explore ul {
+    padding:0;
+    list-style: none;
+    margin-top: .5rem;
+}
+
+.explore li {
+    width:100%;
+}
+
+.explore li + li {
+    margin-top: 5px;
+}
+
+.explore a {
+    text-decoration: none;
+    text-align:right;
+    color:var(--dGrey);
+    background:rgb(240,240,240);
+    font-size:.65rem;
+    display: block;
+    width:100%;
+    padding:.5rem 1.5rem .5rem 0;
+    position: relative;
+}
+
+.explore a:after {
+    content:url(../links/arrow.svg);
+    width: 8px;
+    height: 12px;
+    position: absolute;
+    right:.5rem;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.interest {
+    width:100%;
+    background:var(--lime); 
+    text-align: center;
+    padding:1rem;
+    color: var(--white);
+}
+
+.interest h2 {
+    color:var(--white);
+    font-family: 'helveticaneue_condensedCnBd';
+    font-size: 1rem;
+    margin-bottom:0;
+}
+
+.interest p {
+    font-size:.75rem;
+    margin:0 0 .5rem;
+}
+
+.interest a {
+    background:var(--green);
+    width:100%;
+    color:var(--white);
+    text-decoration: none;
+    font-family: 'helveticaneue_condensedCnBd';
+    font-size:.65rem;
+    padding:.5rem;
+    display: block;
+}
+/* main styles */
+iframe.map {
+    position:relative;
+    z-index:-1;
+    width:100%;
+}
+
+.loc-popup  {
+    position: absolute;
+    z-index:5;
+    top:50%;
+    left:20%;
+}
+.loc-popup a {
+    text-decoration: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items:stretch; 
+}
+
+.loc-popup hgroup {
+    display:inline-block;
+    height: inherit;
+    background: var(--white);
+    padding:.5rem 1.5rem .5rem .5rem;
+}
+
+.loc-popup h2 {
+    color: var(--dGrey);
+    text-transform: uppercase;
+    font-family: 'helveticaneue_thincondCnRgTh';
+    width:100%;
+    font-size:.75rem;
+}
+.loc-popup h3 {
+    color: var(--creamsicle);
+    text-transform: uppercase;
+    width:100%;
+    font-size: .65rem;
+    margin:0;
+}
+
+.loc-popup span {
+    width: 40px;
+    height: 40px;
+    flex-basis: 1 1 40px;
+    background: var(--creamsicle);
+    position:relative;
+    
+}
+
+.loc-popup span:after {
+    content:"";
+    width:40px;
+    height:40px;
+    position:absolute;
+    right:-100%;
+    border-left: 10px solid var(--dGrey);
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+}
+
+.showcase {
+    width: 100%;
+    height:100vh;
+    position:absolute;
+    z-index:1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight-country {
+   width:100%;
+   height:100vh;
+   position: relative;
+   z-index:1;
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: start;
+   align-items: start;
+   padding: 8vh 12vh;
+}
+
+.zambia {
+    background: linear-gradient(180deg, rgba(0,82,147,1) 0%, rgba(0,82,147,0) 69%) no-repeat, url(../links/zambia-hero.jpg) no-repeat;
+    background-size: 100%, cover;
+    background-position: center top, center;
+    position: relative;
+    z-index:1;
+}
+
+.rwanda {
+    background: linear-gradient(180deg, rgba(0,82,147,1) 0%, rgba(0,82,147,0) 69%) no-repeat, url(../links/rwanda-hero.jpg) no-repeat;
+    background-size: 100%, cover;
+    background-position: center top, center;
+    position: relative;
+    z-index:1;
+}
+.loc-info {
+    width: 50vw;
+}
+
+h2.loc-title {
+    font-family: 'helveticaneue_condensedCnBd';
+    color:var(--white);
+    font-size: 6vw;
+    line-height:1;
+    margin-bottom:2rem;
+}
+
+h2.loc-title span {
+    display: block;
+    font-family: 'Helvetica 35 Thin';
+}
+    .info {
+        background:var(--white);
+        width:45%;
+    }
+
+    .summary p {
+        background:var(--blue);
+        color:var(--white);
+        padding:1.5rem;
+        font:1rem/1.5 'Helvetica Neue Medium';
+        
+
+    }
+    .sm-opp {
+        padding:2rem 2rem 1rem;
+        position:relative;
+    }
+
+    .sm-opp h2 {
+        text-transform: uppercase;
+    }
+    .sm-opp ul {
+        padding:1rem 1rem 1rem 1.5rem;
+        color:var(--dGrey);
+    }
+
+    .sm-opp li + li {
+        margin-top:5px;
+    }
+
+    button.learn {
+        border:none;
+        background:var(--creamsicle);
+        position:absolute;
+        right:-2rem;
+        bottom:1.5rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .learn a {
+        text-transform: uppercase;
+        display: block;
+        padding:.5rem 2rem .5rem 1rem;
+        text-decoration: none;
+        color:var(--white);
+    }
+
+    .learn a:after {
+        content: "";
+        position: absolute;
+        background: url(../links/arrow-w.svg) no-repeat;
+        background-position: center;
+        background-size: 100%;
+        width:15px;
+        height:15px;
+        top:.5rem;
+        right:.5rem;
+    }
+
+    /* country info styles */
+
+    main.country {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .country-about {
+        width:100%;
+        overflow-y: scroll;
+    }
+
+    .country-opp {
+        width:100%;
+        overflow-y: scroll;
+    }
+
+        /* first column, about the country and location */
+
+    .country-about {
+        background: var(--blue);
+
+    }
+
+    .country-hero {
+        background: linear-gradient(180deg, rgba(0,82,147,1) 0%, rgba(0,82,147,0) 69%) no-repeat, url(../links/zambia-rsf.jpg) no-repeat;
+        background-position: center top, center;
+        background-size: 100%, cover;
+        height:60vh;
+        padding: 8vh;
+    }
+
+    .country-info {
+        padding:4rem;
+        color: var(--white);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        font-family: 'Helvetica 65 Medium';
+        font-size:.8rem;
+    }
+
+    .country-info h2 {
+        color: var(--creamsicle);
+        font-size:1.5rem;
+    }
+
+    .col1 {
+        width:60%;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content: space-between;
+    }
+
+    .col1 div {
+        margin-bottom:2rem;
+    }
+
+
+    .col1 h3 {
+        color: var(--white);
+        margin-top:2rem;
+        font-size: 1.1rem;
+    }
+    
+   .visit a {
+            background: var(--creamsicle);
+            padding:.5rem 3rem .5rem 1.5rem;
+            text-decoration:none;
+            color:var(--white);
+            position:relative;
+        }
+
+    .visit {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:flex-start;
+        align-items: center;
+        font-size:.75rem;
+    }
+
+    .visit span {
+        margin-left: 1rem;
+    }
+
+    .visit a:after {
+        content: "";
+        position: absolute;
+        background: url(../links/arrow-w.svg) no-repeat;
+        background-position: center;
+        background-size: 8px;
+        width: 8px;
+        height:8px;
+        top:50%;
+        right:.5rem;
+        transform:translateY(-50%);
+    }
+
+    .col2 {
+        width:30%;
+    }
+
+    .col2 figure {
+        margin:0;
+        width:100%;
+    }
+
+    .col2 figure img {
+        width:100%;
+        display: block;
+    }
+
+    .col2 figcaption {
+        margin-top:2rem;
+    }
+
+    .col2 figcaption h3 {
+        color: var(--creamsicle);
+    }
+    .col2 figcaption span {
+        display:block;
+    }
+
+    /* second column about the opportunities at that location */
+    .country-opp {
+        height:100vh;
+    }
+
+    .opp-hero {
+        background: url(../links/zambia-rsf-2.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 20vh;
+        border-bottom: 10px solid var(--orange);
+    }
+
+    .country-opp blockquote {
+        background:rgb(240,240,240);
+        padding:2rem;
+        font-family: 'Helvetica 35 Thin';
+        color: var(--blue);
+        font-size: 1.25rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .country-opp blockquote:after {
+    content: "";
+    position: absolute;
+    z-index:3;
+    bottom:0;
+    left: 20%;
+        width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid var(--white);
+    }
+
+    .country-opp blockquote p + p {
+        text-align: right;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .opp-info {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding:2rem;
+    }
+
+    .opp-about {
+        width: 25%;
+        height:70vh;
+        text-align:right;
+        line-height:1.5;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        overflow: hidden;
+        position: sticky;
+
+    }
+
+    .opp-about h2 {
+        color: var(--orange);
+    }
+
+    .opp-about h3 {
+        margin-top:1rem;
+    } 
+
+    .opp-about a.apply {
+        width:100%;
+        background:var(--lime);
+        color: var(--white);
+        display: block;
+        padding:1rem 2rem;
+        position: relative;
+    }
+
+    .opp-about a:after {
+        content: "";
+        position: absolute;
+        background: url(../links/arrow-w.svg) no-repeat;
+        background-position: center;
+        background-size: 8px;
+        width: 8px;
+        height:8px;
+        top:50%;
+        right:.5rem;
+        transform:translateY(-50%);
+    }
+
+    .opp-openings {
+        width:70%;
+        overflow-y: scroll;
+    }
+.opp-openings hgroup {
+    margin-bottom:2rem;
+}
+    .opp-openings h1 {
+        font-size: 1.25rem;
+    }
+
+    .opp-openings h2 {
+        font-size:2rem;
+        text-transform: uppercase;
+        font-family: 'Helvetica 35 Thin';
+        color: var(--orange);
+        line-height:.8;
+
+    }
+
+    .accordian li {
+        border: 1px solid var(--lGrey);
+        padding:.5rem;
+        margin-bottom:1rem;
+    }
+    .accordian h3 {
+        color: var(--orange);
+        margin-bottom: .5rem;
+    }
+
+    .accordian h3 span {
+        font-size: .75rem;
+        color: var(--lGrey);
+    }
+
+    .accordian p {
+        font-size: .75rem;
+    }
+
+    /** Current SM styles **/
+
+    .current {
+        height:100vh;
+        width:100%;
+        overflow-y: scroll;
+
+        padding:2rem 3rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        background: var(--lBlue);
+        text-align:center;
+    }
+
+    .current h1 {
+        width:100%;
+        color: var(--blue);
+        text-transform: uppercase;
+        margin-bottom:3rem;
+        position: sticky;
+        top:0;
+    }
+
+    .current h1 span {
+        font-family: 'Helvetica 35 Thin'; 
+    }
+
+    .continent {
+        width: 12%;
+        height:100vh;
+    }
+
+    .continent h2 {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-size: 1.25rem;
+        width:100%;
+        color: var(--white);
+    }
+
+    .continent-container {
+        width: 100%;
+        height:100vh;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: center;
+    }
+
+    .smImg {
+        width: calc(100%/2);
+        font-size: .75rem;
+        line-height:1.5;
+        color: var(--dGrey); 
+        margin-bottom:1rem;
+        display: flex;
+        flex-flow:column nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+    }
+   
+    .smImg img {
+       width:calc(100%/1.5); 
+       flex-basis: 1 0 auto;
+       height: auto;
+       display: block;
+       border-radius:50%;
+       border: 3px solid var(--white);
+       }  
+    
+
+    
+
+
+
+
+
+
+
+
+
