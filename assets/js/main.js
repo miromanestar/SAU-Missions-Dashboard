@@ -58,6 +58,7 @@ function loadSwiper() {
     const showcaseSwiper = new Swiper('.swiper-container', {
         lazy: {
             loadPrevNext: true,
+            loadPrevNextAmount: 2
         },
         spaceBetween: 100,
         loop: true,
