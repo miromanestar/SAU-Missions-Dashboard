@@ -46,7 +46,7 @@ main {
     Carousel
 */
 
-#main-carousel {
+#showcase-carousel {
     height: 100%;
 }
 
@@ -68,7 +68,7 @@ main {
 }
 
 .loc-title {
-    font-size: 6vw;
+    font-size: 5vw;
     line-height: 1;
     margin-bottom: 2rem;
 }
@@ -136,13 +136,27 @@ main {
 .loc-info a:after {
     content: "";
     position: absolute;
-    background: url(../images/logos/arrow-w.svg) no-repeat;
+    background: url(../icons/arrow-w.svg) no-repeat;
     background-position: center;
     background-size: 100%;
     width: 15px;
     height: 15px;
     top: .8rem;
     right: .5rem;
+}
+
+.exit-showcase {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 10px;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.exit-showcase img {
+    width: 5rem;
 }
 
 /*
@@ -281,7 +295,7 @@ main {
 
 .sidebar-comission p:before {
     content: "";
-    background: url(../images/logos/qm.png) no-repeat;
+    background: url(../images/qm.png) no-repeat;
     width: 30px;
     height: 40px;
     background-size: 100%;
@@ -326,7 +340,7 @@ main {
 }
 
 .sidebar-explore a:after {
-    content: url(../images/logos/arrow.svg);
+    content: url(../icons/arrow.svg);
     width: 8px;
     height: 12px;
     position: absolute;
