@@ -26,6 +26,7 @@ function loadMap() {
         maxBoundsViscosity: 0.50,
         worldCopyJump: true,
         dragging: false,
+        touchZoom: false
     }).setView([40, 0], 1.50);
     
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -49,7 +50,6 @@ function loadMap() {
         
     world_map.fitWorld().zoomIn();
     world_map.setMaxBounds(world_map.getBounds());
-        console.log(world_map.getBounds())
     $('.leaflet-control-attribution.leaflet-control').remove();
 }
 
@@ -66,13 +66,26 @@ function loadSwiper() {
         autoplay: {
             delay: 6000,
             disableOnInteraction: false,
+        },
+        keyboard: {
+            enabled: true
+        },
+        mousewheel: {
+            forceToAxis: true,
+            thresholdDelta: 200
         }
     });
 
     const exploreSwiper = new Swiper('.explore-container', {
         direction: 'vertical',
         spaceBetween: 1,
-        mousewheel: true
+        mousewheel: {
+            forceToAxis: true,
+            thresholdDelta: 200
+        },
+        keyboard: {
+            enabled: true
+        }
     });
 }
 
