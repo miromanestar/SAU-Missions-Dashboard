@@ -40,26 +40,23 @@ main {
     z-index: 1;
     grid-column: 2/-1;
     grid-row: 1/-1;
+    height: 100vh;
 }
 
 /*
     Carousel
 */
 
-#showcase-carousel {
-    height: 100%;
+#showcase-carousel .swiper-wrapper {
+    width: 100vh;
 }
 
-.carousel-inner {
-    height: 100%;
-}
-
-.carousel-item {
+#showcase-carousel .swiper-slide {
     height: 100vh;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     position: relative;
-    padding: 8vh 12vh;
+    padding: 6vh 12vh;
 }
 
 .loc-info {
@@ -71,6 +68,8 @@ main {
     font-size: 5vw;
     line-height: 1;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .loc-title span {
@@ -82,13 +81,16 @@ main {
     position: absolute;
     bottom: 200px;
     width: 45vh;
-    border-radius: 2px;
+    border-radius: 5px;
+    z-index: 2;
 }
 
 .loc-info .summary {
     background: var(--blue);
     color: var(--white);
     padding: 1.5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .loc-info .summary p {
@@ -153,6 +155,30 @@ main {
     color: white;
     text-align: center;
     font-size: 1.5rem;
+    z-index: 500;
+}
+
+.swiper-slide .loc-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.swiper-slide .loc-img img {
+    max-height: 100vh;
+    min-width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.loc-img:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(180deg, rgba(0,82,147,1) 0%, rgba(0,82,147,0) 40%);
 }
 
 .exit-showcase img {
@@ -165,7 +191,7 @@ main {
 
 #world-map {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 1;
 }
 
@@ -176,12 +202,10 @@ main {
 .left-sidebar {
     z-index: 5;
     background-color: white;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    grid-column: 1/2;
-    grid-row: 1/-1;
 }
 
 .sidebar-logo {
