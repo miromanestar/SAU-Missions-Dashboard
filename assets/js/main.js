@@ -63,7 +63,7 @@ function loadSwiper() {
         loop: true,
         centeredSlides: true,
         autoplay: {
-            delay: 2500,
+            delay: 6000,
             disableOnInteraction: false,
         }
     });
