@@ -56,14 +56,16 @@ function loadMap() {
 function loadSwiper() {
     //Initialize swiper
     const showcaseSwiper = new Swiper('.swiper-container', {
-        lazy: true,
-        spaceBetween: 1,
+        lazy: {
+            loadPrevNext: true,
+        },
+        spaceBetween: 100,
         loop: true,
         centeredSlides: true,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
-        },
+        }
     });
 
     const exploreSwiper = new Swiper('.explore-container', {

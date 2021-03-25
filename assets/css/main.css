@@ -57,6 +57,7 @@ main {
     background-size: cover !important;
     position: relative;
     padding: 6vh 12vh;
+    background-color: white;
 }
 
 .loc-info {
