@@ -73,17 +73,27 @@ main {
     margin-bottom: 2rem;
 }
 
+.loc-title span {
+    font-weight: 100;
+}
+
 .loc-info .info {
     background: var(--white);
     position: absolute;
     bottom: 200px;
     width: 45vh;
+    border-radius: 2px;
 }
 
 .loc-info .summary {
     background: var(--blue);
     color: var(--white);
     padding: 1.5rem;
+}
+
+.loc-info .summary p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 .loc-info .sm-opp {
@@ -98,8 +108,9 @@ main {
 }
 
 .loc-info ul {
-    padding: 1rem 1rem 1rem 1.5rem;
+    padding: 1rem 1rem 0 1.5rem;
     color: var(--dGrey);
+    font-size: 1.4rem;
 }
 
 .loc-info button {
@@ -183,6 +194,7 @@ main {
     top: 0;
     left: 0;
     width: 110%;
+    text-transform: uppercase;
 }
 
 .sidebar-title h1:after {
@@ -223,6 +235,7 @@ main {
     font-size: 3.5rem;
     margin: 0;
     line-height: 1;
+    font-weight: 200;
 }
 
 .sidebar-facts p {
@@ -263,6 +276,7 @@ main {
     position: relative;
     z-index: 2;
     padding-left: 20px;
+    font-weight: 200;
 }
 
 .sidebar-comission p:before {
@@ -281,6 +295,8 @@ main {
     display: inline-block;
     font-size: .75rem;
     line-height: 1;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .sidebar-explore {
