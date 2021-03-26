@@ -1,3 +1,11 @@
+/*
+    Miro Manestar
+    Southern Adventist University
+    Made in collaboration with the SAU School of Visual Arts and Student Missions
+    miroimanestar@gmail.com
+    March 26, 2021
+*/
+
 $(document).ready(function() {
     loadMap();
     loadSwiper();
