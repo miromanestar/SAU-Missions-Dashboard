@@ -8,7 +8,7 @@
 --orange:#CD5328;
 --creamsicle:#FF8849;
 --blue:#005293;
---lBlue:#BBE7E6;
+--lBlue:#bbe7e6;
 --yellow:#FADA63;
 --lGrey: #BBBCBB;
 --dGrey:#5F6163;
@@ -374,6 +374,28 @@ main {
     transform: translateY(-50%);
 }
 
+.explore-nav {
+    transition: .2s;
+}
+
+.explore-nav:focus {
+    outline: none;
+}
+
+.explore-nav-current {
+    background-color: var(--creamsicle) !important;
+    color: white !important;
+}
+
+.explore-nav:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+.explore-nav.explore-nav-current:after {
+    filter: brightness(200);
+}
+
 .sidebar-interest {
     width: 100%;
     background: var(--lime);
@@ -396,6 +418,83 @@ main {
     font-size: .65rem;
     padding: .5rem;
     display: block;
+}
+
+/*
+    Current SMs Page
+*/
+
+.current-sm {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    background-image:  linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(159, 200, 250, 0.6) 80%), url(../images/world-map.gif);
+}
+
+.current-sm-title {
+    justify-content: center;
+    position: sticky;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: var(--blue);
+    width: 100%;
+    font-weight: 700;
+}
+
+.current-sm-title span {
+    font-weight: 300;
+}
+
+.continent {
+    width: 14%;
+    height: 100vh;
+}
+
+.continent h2 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 1.35rem;
+    width: 100%;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.continent-members {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.sm-img {
+    width: calc(100%/2);
+    font-size: .75rem;
+    line-height: 1.5;
+    color: var(--dGrey);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+.sm-img img {
+    width: calc(100%/1.5);
+    flex-basis: 1 0 auto;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+}
+
+.sm-img p {
+    font-size: 1rem;
 }
 
 /*

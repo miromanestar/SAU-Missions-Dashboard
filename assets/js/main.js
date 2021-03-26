@@ -12,7 +12,7 @@ function hideLoader() {
     }, 2000);
 }
 
-var world_map;
+let world_map;
 function loadMap() {
     if (world_map != undefined) {
         world_map.remove();
@@ -26,7 +26,8 @@ function loadMap() {
         maxBoundsViscosity: 0.50,
         worldCopyJump: true,
         dragging: false,
-        touchZoom: false
+        touchZoom: false,
+        doubleClickZoom: false
     }).setView([40, 0], 1.50);
     
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -75,6 +76,11 @@ function loadSwiper() {
             thresholdDelta: 200
         }
     });
+    
+    let exploreSlides = [];
+    $('.explore-container .swiper-wrapper [slide-title]').each( function() {
+        exploreSlides.push($(this).attr('slide-title'))
+    });
 
     const exploreSwiper = new Swiper('.explore-container', {
         direction: 'vertical',
@@ -85,7 +91,15 @@ function loadSwiper() {
         },
         keyboard: {
             enabled: true
+        },
+        pagination: {
+            el: '.sidebar-explore',
+            clickable: true,
+            bulletClass: 'explore-nav',
+            bulletActiveClass: 'explore-nav-current',
+            renderBullet: (index, className) => {
+                return `<a class="${ className }">${ exploreSlides[index] }</a>`;
+            }
         }
     });
 }
-
