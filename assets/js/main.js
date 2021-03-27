@@ -60,6 +60,18 @@ function loadMap() {
     world_map.fitWorld().zoomIn();
     world_map.setMaxBounds(world_map.getBounds());
     $('.leaflet-control-attribution.leaflet-control').remove();
+
+    createMarkers();
+}
+
+function createMarkers() {
+    let circle = L.circle([1.9403, 29.8739], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 50000
+    }).addTo(world_map);
+    circle.bindPopup(`<div class="map-popup"><div class="popup-name">IMPACT HOPE</div><div class="loc-name">Kigali, RWANDA, Africa</div></div>`)
 }
 
 function loadSwiper() {
