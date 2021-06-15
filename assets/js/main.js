@@ -68,8 +68,8 @@ function createMarkers() {
     let circle = L.circle([1.9403, 29.8739], {
         color: 'red',
         fillColor: '#f03',
-        fillOpacity: 0.5,
-        radius: 50000
+        fillOpacity: 1,
+        radius: 100000
     }).addTo(world_map);
     circle.bindPopup(`<div class="map-popup"><div class="popup-name">IMPACT HOPE</div><div class="loc-name">Kigali, RWANDA, Africa</div></div>`)
 }
