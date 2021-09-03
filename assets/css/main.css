@@ -592,6 +592,7 @@ main {
     margin: 1rem;
     background-color: white;
     margin-top: 0;
+    height: 63vh;
 }
 
 .opp-info blockquote {
@@ -626,7 +627,6 @@ main {
 
 .opp-overview {
     width: 25%;
-    height: 70vh;
     text-align: right;
     line-height: 1.5;
     display: flex;
@@ -684,6 +684,19 @@ main {
 
 .accordion-header {
     margin-bottom: 0 !important;
+}
+
+.apply-qr {
+    width: 100%;
+}
+
+.apply-qr h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.apply-qr img {
+    width: 100%
 }
 
 .opp-overlay-dismiss {
