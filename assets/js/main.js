@@ -16,7 +16,9 @@ window.onresize = loadMap;
 
 function hideLoader() {
     setTimeout(function() {
-        $('.spinner-grow').addClass('full-grow').delay(500).queue(function() { $('.load-overlay').fadeOut('slow'); });
+        $('.spinner-grow').addClass('full-grow').delay(500).queue(function() { 
+            $('.load-overlay').fadeOut('slow'); 
+        });
     }, 2000);
 }
 

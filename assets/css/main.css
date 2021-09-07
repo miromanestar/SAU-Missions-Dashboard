@@ -36,7 +36,7 @@ p {
     height: 100%;
     width: 100%;
     position: fixed;
-    grid-template-columns: 250px;
+    grid-template-columns: 12%;
     position: fixed;
 }
 
@@ -480,7 +480,7 @@ main {
 }
 
 .opp-about-hero {
-    height: 60vh;
+    height: 60%;
 }
 
 .opp-about-hero .loc-title {
@@ -508,7 +508,7 @@ main {
 }
 
 .opp-about-desc {
-    height: 40vh;
+    position: relative;
     background-color: var(--blue);
     display: flex;
     flex-flow: row nowrap;
@@ -574,7 +574,7 @@ main {
 }
 
 .opp-hero {
-    height: 20vh;
+    height: 20%;
     border-bottom: 10px solid var(--orange);
 }
 
@@ -593,6 +593,10 @@ main {
     background-color: white;
     margin-top: 0;
     height: 63vh;
+}
+
+.opp-info {
+    height: 90%;
 }
 
 .opp-info blockquote {
