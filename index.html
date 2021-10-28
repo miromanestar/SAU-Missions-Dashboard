@@ -94,7 +94,17 @@
                 <div class="sidebar-interest">
                     <h2>INTERESTED?</h2>
                     <p>Tap to learn more</p>
-                    <a href="https://www.southern.edu/administration/student-missions/index.html">STUDENT MISSIONS</a>
+                    <button
+                        id="sidebar-popover-btn"
+                        tabindex="0"
+                        class="btn" 
+                        role="button" 
+                        data-bs-toggle="popover" 
+                        data-bs-trigger="manual"
+                        data-bs-placement="top"
+                        data-bs-html="true"
+                        data-bs-content="<img src='assets/images/learn-qr.svg' />"
+                    >STUDENT MISSIONS</button>
                 </div>
             </aside>
 
@@ -147,12 +157,14 @@
 
                     <div class="opp-info">
                         <div class="opp-hero">
-                            <img src="/assets/images/zambia-rsf-2.jpg" class="opp-img" alt="Zambian image" />
+                            <div class="opp-img">
+                                <img src="/assets/images/zambia-rsf-2.jpg" alt="Zambian image" />
+                            </div>
+                            <blockquote>
+                                <p class="quote">“This has been one of the most challenging, yet rewarding opportunities I’ve ever experienced!”</p>
+                                <p class="citation">— Returned SM</p>
+                            </blockquote>
                         </div>
-                        <blockquote>
-                            <p class="quote">“This has been one of the most challenging, yet rewarding opportunities I’ve ever experienced!”</p>
-                            <p class="citation">— Returned SM</p>
-                        </blockquote>
 
                         <div class="opp-details">
                             <div class="opp-overview">
@@ -175,7 +187,7 @@
                                 </div>
                                 <div class="apply-qr">
                                     <h2>Apply Now</h2>
-                                    <img src="assets/images/apply-qr.png" />
+                                    <img src="assets/images/apply-qr.svg" />
                                 </div>
                             </div>
 

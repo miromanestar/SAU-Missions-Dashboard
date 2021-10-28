@@ -9,6 +9,7 @@
 $(document).ready(function() {
     loadMap();
     loadSwiper();
+    makePopover();
     hideLoader();
 });
 
@@ -20,6 +21,22 @@ function hideLoader() {
             $('.load-overlay').fadeOut('slow'); 
         });
     }, 2000);
+}
+
+let sidebarPopover;
+function makePopover() {
+    $("[data-bs-toggle='popover']").popover({trigger: "click"}).click(function (event) {
+        event.stopPropagation();
+    
+      }).on('inserted.bs.popover', function () {
+        $(".popover").click(function (event) {
+          event.stopPropagation();
+        })
+      })
+    
+      $(document).click(function () {
+        $("[data-bs-toggle='popover']").popover('hide')
+      })
 }
 
 let world_map;

@@ -218,7 +218,12 @@ main {
 }
 
 .exit-showcase img {
-    width: 5rem;
+    width: 10vh;
+}
+
+.exit-showcase p {
+    font-size: 2vh;
+    margin-top: 1vh;
 }
 
 /*
@@ -312,7 +317,7 @@ main {
 }
 
 .sidebar-facts h3 {
-    font-size: 5rem;
+    font-size: 6vh;
     margin: 0;
     line-height: 1;
     font-weight: 200;
@@ -452,7 +457,7 @@ main {
     margin-bottom: 0;
 }
 
-.sidebar-interest a {
+.sidebar-interest button {
     background: var(--green);
     width: 100%;
     color: var(--white);
@@ -460,6 +465,16 @@ main {
     font-size: 1.5vh;
     padding: .5rem;
     display: block;
+    transition: .2s;
+}
+
+.sidebar-interest button:hover {
+    color: #fff;
+    filter: brightness(0.9);
+}
+
+.popover-body img {
+    width: 100%;
 }
 
 /*
@@ -481,7 +496,7 @@ main {
 }
 
 .opp-about-hero {
-    height: 60%;
+    height: 60vh;
 }
 
 .opp-about-hero .loc-title {
@@ -510,7 +525,7 @@ main {
 
 .opp-about-desc {
     position: relative;
-    height: 40%;
+    height: 40vh;
     background-color: var(--blue);
     display: flex;
     flex-flow: row nowrap;
@@ -575,9 +590,9 @@ main {
     min-width: 25%;
 }
 
-.opp-hero {
-    height: 20%;
-    border-bottom: .7vh solid var(--orange);
+.opp-img {
+    height: 20vh;
+    border-bottom: 8px solid var(--orange);
 }
 
 .opp-hero img {
@@ -588,17 +603,21 @@ main {
 
 .opp-details {
     display: flex;
+    flex-grow: 1;
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 1rem;
     margin: 1rem;
     background-color: white;
     margin-top: 0;
-    height: 75%;
+    height: max-content;
 }
 
 .opp-info {
-    height: 90%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .opp-info blockquote {
@@ -609,7 +628,6 @@ main {
     font-size: 2.2vh;
     position: relative;
     margin-bottom: 0;
-    height: 15%;
 }
 
 .opp-info blockquote:after {
